@@ -1,9 +1,10 @@
-FROM debian:jessie
-MAINTAINER Ilya Stepanov <dev@ilyastepanov.com>
+FROM arm64v8/python:3.9-alpine
+# ORIGINAL MAINTAINER Ilya Stepanov <dev@ilyastepanov.com>
+MAINTAINER Matthew Parette <matthew.parlette@gmail.com>
 
-RUN apt-get update && \
-    apt-get install -y python python-pip cron && \
-    rm -rf /var/lib/apt/lists/*
+# RUN apt-get update && \
+#     apt-get install -y python python-pip cron && \
+#     rm -rf /var/lib/apt/lists/*
 
 RUN pip install s3cmd
 
