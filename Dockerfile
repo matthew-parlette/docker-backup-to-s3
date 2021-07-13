@@ -6,7 +6,7 @@ MAINTAINER Matthew Parette <matthew.parlette@gmail.com>
 #     apt-get install -y python python-pip cron && \
 #     rm -rf /var/lib/apt/lists/*
 
-RUN pip install s3cmd
+RUN pip install https://github.com/s3tools/s3cmd/archive/refs/heads/master.zip
 
 ADD s3cfg /root/.s3cfg
 
